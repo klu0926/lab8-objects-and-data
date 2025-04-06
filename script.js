@@ -1,7 +1,7 @@
 // Part 1: Understanding and Creating Objects
 const student = {
   name: 'Peter',
-  age: '12',
+  age: 12,
   enrolled: true,
   courses: ["math", "english", "science", "art of murder"],
   whoami() {
