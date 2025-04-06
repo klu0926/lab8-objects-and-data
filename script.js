@@ -66,10 +66,27 @@ student.addCourse('swimming')
 console.log('Add swimming to courses')
 console.log(student.courses)
 
-
 // add method to calculate and return total number of courses
 student.howManyCourses = function () {
   const totalCourses = this.courses.length
   return totalCourses
 }
 console.log('Total Courses:', student.howManyCourses())
+
+
+// Bonus Task
+student.scores = scores
+student.getAverageScore = function reduceScores() {
+  const average = this.scores.reduce((acc, current, index, array) => {
+    // if this is the last score calculate average 
+    if (index === array.length - 1) {
+      return Number(((acc + current) / array.length).toFixed(2))
+    } else {
+      return acc + current
+    }
+  }, 0)
+  return average
+}
+console.log('Bonus Task')
+console.log('Stduent Scores:', student.scores)
+console.log("Student Scores Average:", student.getAverageScore())
