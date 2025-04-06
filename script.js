@@ -38,3 +38,38 @@ console.log('firstScore:', firstScore)
 console.log('secondScore:', secondScore)
 console.log('\n')
 
+
+// Part 4: The spread operator
+// clone student object using spread operator
+console.log('4. The spread operator')
+// clone student
+const cloneStudent = { ...student }
+console.log('clone student object:', cloneStudent)
+
+// add new property
+cloneStudent.graduationYear = '2020'
+console.log('clone student graduation year:', cloneStudent.graduationYear)
+
+// merge two arrays
+const newCourses = ['history', 'programming', 'sniper 101']
+student.courses = [...cloneStudent.courses, ...newCourses]
+console.log('Student courses combined:', student.courses)
+console.log('\n')
+
+// Part 5: Object methods
+// add a method to add course
+console.log('5. Object methods')
+student.addCourse = function (course) {
+  this.courses.push(course)
+}
+student.addCourse('swimming')
+console.log('Add swimming to courses')
+console.log(student.courses)
+
+
+// add method to calculate and return total number of courses
+student.howManyCourses = function () {
+  const totalCourses = this.courses.length
+  return totalCourses
+}
+console.log('Total Courses:', student.howManyCourses())
