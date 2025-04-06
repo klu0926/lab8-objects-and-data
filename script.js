@@ -72,6 +72,7 @@ student.howManyCourses = function () {
   return totalCourses
 }
 console.log('Total Courses:', student.howManyCourses())
+console.log('\n')
 
 
 // Bonus Task
@@ -87,6 +88,6 @@ student.getAverageScore = function reduceScores() {
   }, 0)
   return average
 }
-console.log('Bonus Task')
+console.log('!!! Bonus Task')
 console.log('Stduent Scores:', student.scores)
 console.log("Student Scores Average:", student.getAverageScore())
