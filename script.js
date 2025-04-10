@@ -15,12 +15,19 @@ student.whoami()
 console.log('\n')
 
 // Part 2: Working with JSON
-// convert object to JSON
-const jsonString = JSON.stringify(student)
-const object = JSON.parse(jsonString)
 console.log('2. Working with JSON')
+// Convert to string
+const jsonString = JSON.stringify(student)
 console.log(`JSON STRING: ${jsonString}`)
-console.log(`Covert JSON back to object:`, object)
+
+// Cover back to object
+const newStudent = JSON.parse(jsonString)
+console.log(`Covert JSON back to object (newStudent):`, newStudent)
+
+// Compare original student with new student
+console.log('Compare original student with new student object:')
+console.log('Are they the same object?', student === newStudent)
+console.log('Do you have the same conent?', JSON.stringify(student) === JSON.stringify(newStudent))
 console.log('\n')
 
 // Part 3: Using Destructuring Assignment
